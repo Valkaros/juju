@@ -1,5 +1,8 @@
 .titulo {
     margin: 1rem;
-    /* IMPORTANTE */
+    color: brown;
+  }
+  .subtitulo {
+    margin: 1rem;
     text-align: center;
   }
