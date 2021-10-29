@@ -1,0 +1,122 @@
+<form [formGroup]="formulario">
+  <div class="container">
+    <div class="header-sub-title">
+      <div>
+        <img src="./assets/escudoHogwarts.png" class="logo">
+        <div class="titulo">
+          <h1><strong>Escuela de hechicería y brujería Hogwarts</strong></h1>
+        </div>
+      </div>
+      <hr>
+      <h2 class="sub-title">Solicitud de inscripción</h2>
+    </div>
+    <br>
+    <br>
+    <table class="table table-striped table-bordered row-border hover" >
+      <tr>
+        <th>
+          <div>
+            Nombres
+          </div>
+          <input style="width: 250px;" type="text" id="nombre" formControlName="nombre">
+        </th>
+        <th>
+          <div>
+            Apellidos
+          </div>
+          <input style="width: 250px;" type="text" id="apellido" formControlName="apellido">
+        </th>
+        <th>
+          <div>
+            Fecha de nacimiento
+          </div>
+          <input style="width: 250px;" type="date" id="fnaci" formControlName="fnaci">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div>
+            Edad
+          </div>
+          <input style="width: 250px;" type="number" id="edad" formControlName="edad">
+        </th>
+        <th>
+          <div>
+            Ciudad de nacimiento
+          </div>
+          <input style="width: 250px;" type="text" id="ciudad" formControlName="ciudad">
+        </th>
+        <th>
+          <div>
+            Departamento de nacimiento
+          </div>
+          <input style="width: 250px;" type="text" id="depar" formControlName="depar">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div>
+            País de nacimiento
+          </div>
+          <input style="width: 250px;" type="text" id="pais" formControlName="pais">
+        </th>
+        <th>
+          <div>
+            Teléfono de la casa
+          </div>
+          <input style="width: 250px;" type="number" id="telc" formControlName="telc">
+        </th>
+        <th>
+          <div>
+            Dirección
+          </div>
+          <input style="width: 250px;" type="text" id="direcion" formControlName="direccion">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div>
+            Nombre completo de la madre
+          </div>
+          <input style="width: 250px;" type="text" id="nombreM" formControlName="nombreM">
+        </th>
+        <th>
+          <div>
+            Ocupación de la madre
+          </div>
+          <input style="width: 250px;" type="text" id="ocuM" formControlName="ocuM">
+        </th>
+        <th>
+          <div>
+            Teléfono de la madre
+          </div>
+          <input style="width: 250px;" type="number" id="telM" formControlName="telM">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div>
+            Nombre completo del padre
+          </div>
+          <input style="width: 250px;" type="text" id="nombreP" formControlName="nombreP">
+        </th>
+        <th>
+          <div>
+            Ocupación del padre
+          </div>
+          <input style="width: 250px;" type="text" id="ocuP" formControlName="ocuP">
+        </th>
+        <th>
+          <div>
+            Teléfono del padre
+          </div>
+          <input style="width: 250px;" type="number" id="telP" formControlName="telP">
+        </th>
+      </tr>
+    </table>
+    <button style="width: 80px;" [routerLink]="['/estudiantes']">Atrás</button>
+    <button style="width: 80px; margin-left: 20px;" (click)="save()">Guardar</button>
+    <br>
+    <br>
+  </div>
+</form>

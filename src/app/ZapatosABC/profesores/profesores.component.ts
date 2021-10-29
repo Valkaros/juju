@@ -1,17 +1,18 @@
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-zapatos-abc',
-  templateUrl: './zapatos-abc.component.html',
-  styleUrls: ['./zapatos-abc.component.css']
+  selector: 'app-profesores',
+  templateUrl: './profesores.component.html',
+  styleUrls: ['./profesores.component.css']
 })
-export class ZapatosAbcComponent implements OnDestroy, OnInit {
+export class ProfesoresComponent implements OnDestroy, OnInit {
 
   dtOptions: DataTables.Settings = {};
   dtTrigger = new Subject<any>();
-  //  public dataSource = new Array<casa>();
+  data: any;
 
   constructor(private http: HttpClient) {
   }
@@ -29,5 +30,13 @@ export class ZapatosAbcComponent implements OnDestroy, OnInit {
 
   ngOnDestroy(): void {
     this.dtTrigger.unsubscribe();
+  }
+
+  serchteachers(){
+    this.http.get('http://hp-api.herokuapp.com/api/characters/staff')
+    .subscribe((res: any) => {
+      this.data = res;
+      this.dtTrigger.next();
+    });
   }
 }
